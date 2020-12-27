@@ -16,6 +16,6 @@ Youtube：波仔分享
 
 脚本安装命令
 
-curl -O https://raw.githubusercontent.com/xiaotian0127/Trojan/master/Trojan.sh && chmod  x trojan.sh && ./trojan.sh
+curl -O https://github.com/xiaotian0127/Trojan-1/blob/master/Trojan.sh && chmod  x trojan.sh && ./trojan.sh
 
-wget --no-check-certificate https://raw.githubusercontent.com/xiaotian0127/Trojan/master/Trojan.sh && chmod +x Trojan.sh && ./Trojan.sh
+wget --no-check-certificate https://github.com/xiaotian0127/Trojan-1/blob/master/Trojan.sh && chmod +x Trojan.sh && ./Trojan.sh
