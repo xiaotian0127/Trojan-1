@@ -112,10 +112,8 @@ yellow "请输入绑定到本VPS的域名"
 green "======================="
 read your_domain
 real_addr=`ping ${your_domain} -c 1 | sed '1{s/[^(]*(//;s/).*//;q}'`
-#local_addr=`curl ipv4.icanhazip.com`
-#local_addr= `103.83.157.36`
-#if [ $real_addr == $local_addr ] ; then
-if [ true ] ; then
+local_addr=`curl ipv4.icanhazip.com`
+if [ $real_addr == $local_addr ] ; then
 	green "=========================================="
 	green "       域名解析正常，开始安装trojan"
 	green "=========================================="
@@ -151,7 +149,7 @@ EOF
 	#设置伪装站
 	rm -rf /usr/share/nginx/html/*
 	cd /usr/share/nginx/html/
-	wget https://github.com/xiaotian0127/Trojan-1/blob/master/web.zip
+	wget https://github.com/xiaotian0127/Trojan-1/raw/master/web.zip
     	unzip web.zip
 	systemctl restart nginx.service
 	#申请https证书
