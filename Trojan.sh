@@ -151,6 +151,7 @@ EOF
 	cd /usr/share/nginx/html/
 	wget https://github.com/xiaotian0127/Trojan-1/raw/master/web.zip
     	unzip web.zip
+	rm web.zip
 	systemctl restart nginx.service
 	#申请https证书
 	mkdir /usr/src/trojan-cert
@@ -250,8 +251,8 @@ EOF
 	cd /usr/src/trojan-cli/
 	zip -q -r trojan-cli.zip /usr/src/trojan-cli/
 	trojan_path=$(cat /dev/urandom | head -1 | md5sum | head -c 16)
-	mkdir /usr/share/nginx/html/${trojan_path}
-	mv /usr/src/trojan-cli/trojan-cli.zip /usr/share/nginx/html/${trojan_path}/
+#	mkdir /usr/share/nginx/html/${trojan_path}
+#	mv /usr/src/trojan-cli/trojan-cli.zip /usr/share/nginx/html/${trojan_path}/
 	#增加启动脚本
 	
 cat > ${systempwd}trojan.service <<-EOF
